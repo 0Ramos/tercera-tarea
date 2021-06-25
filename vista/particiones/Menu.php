@@ -8,10 +8,9 @@
     </head>
     <body><!-- este campo es para el contenido -->        
         <div class="pos-f-t">
-             <nav class="navbar navbar-dark bg-warning">
+             <nav class="navbar navbar-success bg-success">
                 <button id="navi" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-            
                 </button>  
                 <label for="navi" class="navbar-toggler"><img src="../../imagen/logo.png" alt="logo" width="75px" height="50px"></label>
                 <a href="../logins/Logout.php" class="navbar-toggler">Cerrar Sesión</a>

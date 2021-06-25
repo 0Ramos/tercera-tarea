@@ -3,7 +3,7 @@ require_once '../../controlador/clienteControlador.php';
 $obj = new clienteControlador();
 $datos=$obj->MostrarDatos();
 
-$tabla ='<table class="table table-dark">
+$tabla ='<table class="table table-info">
 									<thead>
 										<tr class="font-weight-bold">
 											<td>Nombre</td>

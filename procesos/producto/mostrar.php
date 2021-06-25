@@ -3,7 +3,7 @@ require_once '../../controlador/productoControlador.php';
 $obj = new productoControlador();
 $datos=$obj->MostrarDatos();
 
-$tabla ='<table class="table table-dark">
+$tabla ='<table class="table table-info">
 									<thead>
 										<tr class="font-weight-bold">
 											<td>Tipo de Producto</td>

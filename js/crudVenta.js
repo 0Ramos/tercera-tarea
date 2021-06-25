@@ -1,33 +1,34 @@
 function mostrar(){
 	$.ajax({
 		type:"POST",
-		url:"procesos/mostrarDatos.php",
+		url:"./../../procesos/venta/mostrar.php",
 		success:function(r){
 			$('#tablaDatos').html(r);
 		}
 	});
 }
-function obtenerDatos(id){
+function obtenerDatos(id_cli){
 	$.ajax({
 		type:"POST",
-		data:"id=" + id,
-		url:"procesos/obtenerDatos.php",
+		data:"id_cli=" + id_cli,
+		url:"../../procesos/venta/obtener.php",
 		success:function(r){
 			r=jQuery.parseJSON(r);
-			$('#id').val(r['id']);
-			$('#nombreu').val(r['nombre']);
-			$('#apellidou').val(r['apellido']);
-			$('#emailu').val(r['email']);
-			
+			$('#id_pe').val(r['id_pe']);
+			$('#nom_peu').val(r['nom_pe']);
+			$('#Estado_peu').val(r['Estado_pe']);
+			$('#Precio_peu').val(r['Precio_pe']);
+			$('#distritou').val(r['distrito'])
 		}
 	});
 }
 function actualizarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"procesos/actualizarDatos.php",
+		url:"../../procesos/venta/actualizar.php",
 		data:$('#frminsertu').serialize(),
 		success:function(r){
+			console.log(r)
 			if(r==1){
 				mostrar();
 				swal("Actualizado con exito!", ":D", "success");
@@ -38,7 +39,7 @@ function actualizarDatos(){
 	});
 	return false;
 }
-function eliminarDatos(id){
+function eliminarDatos(id_cli){
 	swal({
 		title: "¿Estas seguro de eliminar este registro?",
 		text: "!Una vez eliminado no podra recuperarse¡",
@@ -50,9 +51,10 @@ function eliminarDatos(id){
 		if (willDelete) {
 			$.ajax({
 				type:"POST",
-				url:"procesos/eliminarDatos.php",
-				data:"id="+id,
+				url:"../../procesos/venta/eliminar.php",
+				data:"id_cli="+id_cli,
 				success:function(r){
+                    console.log(r);
 					if(r==1){
 						mostrar();
 						swal("Eliminado con exito!", ":D", "success");
@@ -67,9 +69,10 @@ function eliminarDatos(id){
 function insertarDatos(){
 	$.ajax({
 		type:"POST",
-		url:"procesos/insertarDatos.php",
+		url:"../../procesos/venta/insertar.php",
 		data:$('#frminsert').serialize(),
 		success:function(r){
+            console.log(r);
 			if(r==1){
 				$('#frminsert')[0].reset;//limpiar formulario
 				mostrar();

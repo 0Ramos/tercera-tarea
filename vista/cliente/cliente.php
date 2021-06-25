@@ -11,7 +11,7 @@
 
 <body>
     <div class="pos-f-t">
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-dark bg-success">
             <button id="navi" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,7 +39,7 @@
                         <a class="flex-sm-fill text-sm-center nav-link" style="margin-left: 25px;" href="../producto/producto.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="flex-sm-fill text-sm-center nav-link" style="margin-left: 25px;" href="Estadistico.php">Gráfico de ventas</a>
+                        <a class="flex-sm-fill text-sm-center nav-link" style="margin-left: 25px;" href="../usuario/usuario.php">Usuario</a>
                     </li>
                 </ul>
             </div>
